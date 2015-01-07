@@ -70,7 +70,7 @@ app.get('/api/messages', function (req, res) {
 //Create Message
 app.post('/api/messages', function (req, res) {
   var now = Date.now();
-  Todo.create({
+  Message.create({
     sender: 'S_K',
     recipient: 'all',
     time: now,
