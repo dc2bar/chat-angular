@@ -70,6 +70,7 @@ app.get('/api/messages', function (req, res) {
 //Create Message
 app.post('/api/messages', function (req, res) {
   var now = Date.now();
+  console.log(req);
   Message.create({
     sender: 'S_K',
     recipient: 'all',
@@ -80,6 +81,7 @@ app.post('/api/messages', function (req, res) {
       res.send(err);
     }
     res.json(todo);
+    console.log(todo.sender + " -> " + todo.recipient + ": " + todo.body);
   });
 });
 
